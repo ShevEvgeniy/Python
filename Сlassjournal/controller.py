@@ -25,7 +25,7 @@ def controller():
             flag = 1
             while flag == 1:
                 last_name = input('Введите фамилию ученика или 0 для выхода из программы\nВвод: ')
-            if last_name == '0':
-                flag = 0
-            else:
-                see_rating(last_name)
+                if last_name == '0':
+                    flag = 0
+                else:
+                    see_rating(last_name)
