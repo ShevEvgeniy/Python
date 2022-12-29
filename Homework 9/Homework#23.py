@@ -1,5 +1,6 @@
 # Напишите Бота, удаляющего из текста все слова, содержащие "абв". (Ввод от пользователя)
 
+
 # txt = input("Введите текст через пробел:\n")
 # print(f"Исходный текст: {txt}")
 # find_txt = "абв"
@@ -29,10 +30,10 @@ def del_advV2(update, context):
             list1.append(i)
     context.bot.send_message(update.effective_chat.id, " ".join(list1[1:]))
 
-    hand_com = CommandHandler('start', del_advV2)
-    del_handler = MessageHandler(Filters.text, del_abv)
-    dispatcher.add_handler(del_handler)
-    dispatcher.add_handler(hand_com)
+hand_com = CommandHandler('start', del_advV2)
+del_handler = MessageHandler(Filters.text, del_abv)
+dispatcher.add_handler(del_handler)
+dispatcher.add_handler(hand_com)
 
-    updater.start_polling()
-    updater.idle()
+updater.start_polling()
+updater.idle()
